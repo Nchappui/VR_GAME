@@ -8,7 +8,8 @@ using Valve.VR.InteractionSystem;
 public class ViveInput : MonoBehaviour
 {
     
-    public SteamVR_Action_Vector2 touchpadAction;
+    public SteamVR_Action_Vector2 InfinadeckAction;
+    public float Speed = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,13 +28,15 @@ public class ViveInput : MonoBehaviour
         {
             Vector3 direction = (PlayerCamera.transform.rotation * Vector3.forward);
             direction.y = 0;
-            transform.parent.position += direction * Time.deltaTime;
+            transform.parent.position += direction * Time.deltaTime * Speed;
         }
-        Vector2 touchpadValue = touchpadAction.GetAxis(SteamVR_Input_Sources.Any);
+        Vector2 InfinadeckDirection = InfinadeckAction.GetAxis(SteamVR_Input_Sources.Any);
 
-        if(touchpadValue != Vector2.zero)
+        if(InfinadeckDirection != Vector2.zero)
         {
-            //print(touchpadValue);
+            print(InfinadeckDirection);
+            Vector3 Direction = new Vector3(InfinadeckDirection.x, 0, InfinadeckDirection.y);
+            transform.parent.position += Direction * Time.deltaTime * Speed;
         }
         
     }
