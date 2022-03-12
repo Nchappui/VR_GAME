@@ -123,6 +123,29 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &146341922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 168724, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 799551568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &146341927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146341922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502d59baae7106e4e88eba98a2bb64d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchpadAction:
+    actionPath: /actions/default/in/touchpadtouch
+    needsReinit: 0
+  forward:
+    actionPath: /actions/default/in/Forward
+    needsReinit: 0
 --- !u!1 &187636648
 GameObject:
   m_ObjectHideFlags: 0

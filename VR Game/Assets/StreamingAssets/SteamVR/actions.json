@@ -50,6 +50,10 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/touchpadtouch",
+      "type": "vector2"
+    },
+    {
       "name": "/actions/default/in/Forward",
       "type": "boolean"
     },
