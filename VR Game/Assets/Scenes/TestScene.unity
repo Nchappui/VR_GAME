@@ -1081,7 +1081,7 @@ GameObject:
   - component: {fileID: 1676424954}
   - component: {fileID: 1676424955}
   m_Layer: 0
-  m_Name: FlowerPoint
+  m_Name: HintPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1095,7 +1095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676424953}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.213, y: -0.35015607, z: -0.904}
+  m_LocalPosition: {x: -0.213, y: -0.215, z: -1.054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 774814788}
@@ -1110,11 +1110,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1676424953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80df3856ba408c944a3cf528cf7bad83, type: 3}
+  m_Script: {fileID: 11500000, guid: 760581ea094d68e4d87ea8f393b22e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hoverButton: {fileID: 205855099}
-  prefab: {fileID: 1000011210241306, guid: 8a2487c189a464148aadc3af2effa7c8, type: 3}
+  prefab: {fileID: 6372607575312634779, guid: 3992f36b23d7f154c9a6ae1b0989e876, type: 3}
 --- !u!4 &1686958698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 453574, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}

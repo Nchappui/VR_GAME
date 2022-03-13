@@ -25,7 +25,7 @@ namespace Valve.VR.InteractionSystem.Sample
             planting.transform.position = this.transform.position;
             planting.transform.rotation = Quaternion.Euler(0, Random.value * 360f, 0);
 
-            planting.GetComponentInChildren<MeshRenderer>().material.SetColor("_TintColor", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
+            //planting.GetComponentInChildren<MeshRenderer>().material.SetColor("_TintColor", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
 
             Rigidbody rigidbody = planting.GetComponent<Rigidbody>();
             if (rigidbody != null)

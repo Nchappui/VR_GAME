@@ -9,7 +9,7 @@ public class ViveInput : MonoBehaviour
 {
     
     public SteamVR_Action_Vector2 InfinadeckAction;
-    public float Speed = 30.0f;
+    public float Speed = 20.0f;
     // Start is called before the first frame update
     void Start()
     {
