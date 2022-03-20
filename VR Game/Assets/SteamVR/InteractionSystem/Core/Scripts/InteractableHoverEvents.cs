@@ -18,6 +18,7 @@ namespace Valve.VR.InteractionSystem
 		public UnityEvent onHandHoverEnd;
 		public UnityEvent onAttachedToHand;
 		public UnityEvent onDetachedFromHand;
+		public UnityEvent<Hand> onAttachedToHandParam;
 
 		//-------------------------------------------------
 		private void OnHandHoverBegin()
@@ -37,6 +38,7 @@ namespace Valve.VR.InteractionSystem
 		private void OnAttachedToHand( Hand hand )
 		{
 			onAttachedToHand.Invoke();
+			onAttachedToHandParam.Invoke(hand);
 		}
 
 
