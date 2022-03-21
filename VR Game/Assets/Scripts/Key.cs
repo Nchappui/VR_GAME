@@ -22,16 +22,16 @@ namespace Valve.VR.InteractionSystem
         }
         public void AttachedToHand(Hand hand)
         {
-            this.transform.rotation = hand.transform.rotation;
+            //this.transform.rotation = hand.transform.rotation;
         }
         
         private void OnTriggerEnter(Collider other)
         {
             if (other.transform.parent.name == Lock.name)
             {
-                Rigidbody rb = other.transform.parent.GetComponentInParent<Rigidbody>();
-                rb.isKinematic = false;
-                Destroy(gameObject); 
+                //Rigidbody rb = other.transform.parent.GetComponentInParent<Rigidbody>();
+                //rb.isKinematic = false;
+                //Destroy(gameObject); 
                 UnlockDoor.Invoke();
 
             }
