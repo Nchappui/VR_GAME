@@ -11,6 +11,7 @@ public class PadlockNumber : MonoBehaviour
     public CellNumber cell_3;
     public CellNumber cell_4;
     public UnityEvent rightCode;
+    public UnityEvent wrongCode;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,10 @@ public class PadlockNumber : MonoBehaviour
         if (cell_1.number *1000 + cell_2.number*100 + cell_3.number*10 + cell_4.number == SolutionNumber)
         {
             rightCode.Invoke();
-
+        }
+        else
+        {
+            wrongCode.Invoke();
         }
     }
 }

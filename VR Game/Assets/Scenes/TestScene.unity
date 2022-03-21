@@ -2326,13 +2326,28 @@ MonoBehaviour:
   rightCode:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2100000, guid: c33456da50c267344af82aa3b8f56a2a, type: 2}
-        m_TargetAssemblyTypeName: UnityEngine.Material, UnityEngine
-        m_MethodName: set_mainTexture
+      - m_Target: {fileID: 1027722343}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2800000, guid: 3e56fccbd43645846b91452f3498941d, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture, UnityEngine
+          m_ObjectArgument: {fileID: 2100000, guid: c33456da50c267344af82aa3b8f56a2a, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  wrongCode:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1027722343}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 4ec5a9e50bd9d3e479661d54024f8104, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4313,7 +4328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027722340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.269, z: 0.05}
+  m_LocalPosition: {x: 0.043, y: 0.269, z: 0.05}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 479221595}
@@ -4351,7 +4366,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c33456da50c267344af82aa3b8f56a2a, type: 2}
+  - {fileID: 2100000, guid: 4ec5a9e50bd9d3e479661d54024f8104, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5814,7 +5829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0e35ef0cc211b408d2d7e7eb0f850d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingPart: {fileID: 0}
+  movingPart: {fileID: 1579314292}
   localMoveDistance: {x: 0, y: 0, z: -0.01}
   engageAtPercent: 0.5
   disengageAtPercent: 0.4
