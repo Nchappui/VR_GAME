@@ -30,6 +30,6 @@ public class Door : MonoBehaviour
     
     IEnumerator waiter()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
     }
 }
