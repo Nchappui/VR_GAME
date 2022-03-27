@@ -9,31 +9,49 @@ namespace Valve.VR.InteractionSystem
     {
         public GameObject Lock;
         public UnityEvent UnlockDoor;
+        private Rigidbody rb;
+        public Vector3 LockOrientation;
+        private bool isInLock = false;
+        private bool willBeDestroyed=false;
         // Start is called before the first frame update
         void Start()
         {
-
+            rb = this.GetComponent<Rigidbody>();
         }
 
         // Update is called once per frame
         void Update()
         {
-
+            if (isInLock)
+            {
+                LockOrientation.x += (float)2;
+                this.transform.rotation = Quaternion.Euler(LockOrientation);
+                if (!willBeDestroyed)
+                {
+                    willBeDestroyed = true;
+                    StartCoroutine(DestroyKey());
+                }
+            }
         }
         
         
         private void OnTriggerEnter(Collider other)
         {
-            print(this.name);
-            print(other.name);
             if (other.transform.parent.name == Lock.name)
             {
-                //Rigidbody rb = other.transform.parent.GetComponentInParent<Rigidbody>();
-                //rb.isKinematic = false;
-                //Destroy(gameObject); 
-                UnlockDoor.Invoke();
+                rb.isKinematic = true;
+                this.transform.position = other.transform.position;
+                this.transform.rotation = Quaternion.Euler(LockOrientation);
+                isInLock = true;
+
 
             }
+        }
+        IEnumerator DestroyKey()
+        {
+            yield return new WaitForSeconds(2);
+            Destroy(this.gameObject);
+            UnlockDoor.Invoke();
         }
 
     }
