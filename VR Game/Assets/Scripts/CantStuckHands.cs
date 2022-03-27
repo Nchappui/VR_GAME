@@ -17,7 +17,7 @@ public class CantStuckHands : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(this.transform.parent.rotation.y);
+        //print(this.transform.parent.rotation.y);
         if (closed & this.transform.parent.rotation.y*100 > init_rot+5)
         {
             closed = false;
