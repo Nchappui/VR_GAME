@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class PadlockNumber : MonoBehaviour
 {
-    private static int SolutionNumber = 1234;
+    public int SolutionNumber;
     public CellNumber cell_1;
     public CellNumber cell_2;
     public CellNumber cell_3;
