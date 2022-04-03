@@ -9,7 +9,7 @@ public class ViveInput : MonoBehaviour
 {
     
     public SteamVR_Action_Vector2 InfinadeckAction;
-    public float Speed = 20.0f;
+    public float Speed = 10.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +24,11 @@ public class ViveInput : MonoBehaviour
         GameObject PlayerCamera = GameObject.Find("VRCamera");
         //print((PlayerCamera.transform.rotation * Vector3.forward));
         //Console.WriteLine("Values x and y: {0} {1} ", (PlayerCamera.transform.rotation * Vector3.forward).x, (PlayerCamera.transform.rotation * Vector3.forward).y);
-        if (SteamVR_Actions.default_Forward.GetStateDown(SteamVR_Input_Sources.Any))
+        if (SteamVR_Actions.default_Forward.GetState(SteamVR_Input_Sources.Any))
         {
             Vector3 direction = (PlayerCamera.transform.rotation * Vector3.forward);
             direction.y = 0;
-            player.trackingOriginTransform.position += direction * Speed;
+            player.trackingOriginTransform.position += direction * Speed * Time.deltaTime;
             //player.trackingOriginTransform.position += direction * Time.deltaTime * Speed;
             //Vector3 playerFeetOffset = player.trackingOriginTransform.position - player.feetPositionGuess;
             //player.trackingOriginTransform.position = teleportPosition + playerFeetOffset;
