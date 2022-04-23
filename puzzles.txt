@@ -1,0 +1,18 @@
+rajouter un niveau au tuto pour expliquer le respawn des objest sur la table du niveau
+
+trouver les tuyaux avec la bonne taille et les places -> donner accès aux deux derniers livres pour la bibilio
+clés cachée partout, porte finale avec 5 serrures
+Piles dans la premiere salle
+
+switch pour la lumiere et projecteur UV avec des piles (trouver les piles) -> montre carré, triangle,croix,rond -> donne un code pour avoir accès à la dernière clé
+Equation à résoudre avec plusieurs parties à plusieurs endroits
+
+2eme niveau
+chiffre PI au mur et papiers (1x  -> 10A, 2D, 1x-> 6D, 1B, 1x -> CDAB) 
+(emplacement a trouver grace a une enigme)
+
+3eme niveau:
+Plateforme avec du poids mettre assez de poids sur plusieures plateformes
+toucher des cibles avec des balles
+allumer des torches avec un bout de bois, lui meme a allumer vers un feu plus loin, temps imparti avant que le bout de bois s'eteigne
+4 statuettes d'arbre à placer, l'rdre des statuettes est a l'horizon
