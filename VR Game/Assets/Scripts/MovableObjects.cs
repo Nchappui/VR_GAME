@@ -7,7 +7,8 @@ public class MovableObjects : MonoBehaviour
     [Tooltip("Height at which the object is reset or deleted")]
     public float limitHeight = -10;
 
-    public Vector3 RespawnPos { get; private set; }
+    [Tooltip("Position where the object will repsawn if destroyed")]
+    public Vector3 RespawnPos;
     public Quaternion RespawnRot { get; private set; }
     public Vector3 RespawnScale { get; private set; }
     private void Awake()
