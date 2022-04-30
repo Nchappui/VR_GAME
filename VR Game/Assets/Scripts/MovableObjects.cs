@@ -14,8 +14,6 @@ public class MovableObjects : MonoBehaviour
     private void Awake()
     {
         var transform1 = transform;
-        RespawnPos = transform1.position;
-        RespawnRot = transform1.rotation;
         RespawnScale = transform1.localScale;
     }
 

@@ -22,7 +22,7 @@ public class PlankPuzzle : MonoBehaviour
         {
             wellPlacedRow.Invoke();
             //Destroying after soling the puzzle reduces the computations of the game
-            StartCoroutine(DestroyRamp());
+            //StartCoroutine(DestroyRamp());
         }
 
     }
