@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class PlankStick : MonoBehaviour
 {
-    private bool touch_plank = false;
     private bool has_been_added = false;
     public GameObject right_plank;
     private int touch_count = 0;
