@@ -18211,7 +18211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open_pos_tranform: {fileID: 1107752718}
   speed: 0.1
-  number_of_books_to_place: 1
+  number_of_books_to_place: 2
 --- !u!4 &1800927660
 Transform:
   m_ObjectHideFlags: 0
