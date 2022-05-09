@@ -17,7 +17,7 @@ public class PlankPuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(wellPlacedPlanks);
+        //print(wellPlacedPlanks);
         if (wellPlacedPlanks == 4)
         {
             wellPlacedRow.Invoke();

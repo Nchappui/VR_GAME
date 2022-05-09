@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightSwitch : MonoBehaviour
 {
-    private Light light;
+    private new Light light;
     private float init_range;
     // Start is called before the first frame update
     void Start()
