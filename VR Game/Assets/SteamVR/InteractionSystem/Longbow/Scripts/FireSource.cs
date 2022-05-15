@@ -6,6 +6,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 namespace Valve.VR.InteractionSystem
 {
@@ -30,6 +31,8 @@ namespace Valve.VR.InteractionSystem
 
 		public bool canSpreadFromThisSource = true;
 
+		public UnityEvent startBurning;
+
 		//-------------------------------------------------
 		void Start()
 		{
@@ -38,6 +41,7 @@ namespace Valve.VR.InteractionSystem
 				StartBurning();
 			}
 		}
+
 
 
 		//-------------------------------------------------
@@ -89,6 +93,7 @@ namespace Valve.VR.InteractionSystem
 		{
 			isBurning = true;
 			ignitionTime = Time.time;
+			startBurning.Invoke();
 
 			// Play the fire ignition sound if there is one
 			if ( ignitionSound != null )
@@ -109,5 +114,7 @@ namespace Valve.VR.InteractionSystem
 				}
 			}
 		}
+
+
 	}
 }
