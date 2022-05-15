@@ -23,7 +23,7 @@ public class CellNumber : MonoBehaviour
 
     public void Up()
     {
-        print("Up has been pressed");
+        //print("Up has been pressed");
         if (number == 9) number = 0;
         else number += 1;
 
@@ -32,7 +32,7 @@ public class CellNumber : MonoBehaviour
 
     public void Down()
     {
-        print("Down has been pressed");
+        //print("Down has been pressed");
         if (number == 0) number = 9;
         else number -= 1;
 

@@ -31,6 +31,9 @@ namespace Valve.VR.InteractionSystem
 
         protected Interactable interactable;
 
+		public bool startFrozen;
+		private Transform temp_end;
+
 
         protected virtual void Awake()
         {
@@ -40,6 +43,11 @@ namespace Valve.VR.InteractionSystem
 
         protected virtual void Start()
 		{
+			if (startFrozen)
+            {
+				temp_end = endPosition;
+				endPosition = startPosition;
+            }
 			if ( linearMapping == null )
 			{
 				linearMapping = GetComponent<LinearMapping>();
@@ -52,7 +60,7 @@ namespace Valve.VR.InteractionSystem
 
             initialMappingOffset = linearMapping.value;
 
-			if ( repositionGameObject )
+			if ( repositionGameObject && endPosition!=startPosition )
 			{
 				UpdateLinearMapping( transform );
 			}
@@ -62,7 +70,7 @@ namespace Valve.VR.InteractionSystem
         {
             GrabTypes startingGrabType = hand.GetGrabStarting();
 
-            if (interactable.attachedToHand == null && startingGrabType != GrabTypes.None)
+            if (interactable.attachedToHand == null && startingGrabType != GrabTypes.None && !startFrozen)
             {
                 initialMappingOffset = linearMapping.value - CalculateLinearMapping( hand.transform );
 				sampleCount = 0;
@@ -137,11 +145,18 @@ namespace Valve.VR.InteractionSystem
 				mappingChangeRate = Mathf.Lerp( mappingChangeRate, 0.0f, momemtumDampenRate * Time.deltaTime );
 				linearMapping.value = Mathf.Clamp01( linearMapping.value + ( mappingChangeRate * Time.deltaTime ) );
 
-				if ( repositionGameObject )
+				if ( repositionGameObject && endPosition!=startPosition)
 				{
 					transform.position = Vector3.Lerp( startPosition.position, endPosition.position, linearMapping.value );
 				}
 			}
 		}
+		public void unFreezeObject()
+        {
+			startFrozen = false;
+			endPosition = temp_end;
+			Awake();
+			Start();
+        }
 	}
 }

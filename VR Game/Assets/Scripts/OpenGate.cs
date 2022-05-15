@@ -41,13 +41,21 @@ public class OpenGate : MonoBehaviour
     public void change_left_true()
     { 
         left_good_code = true;
-        if (right_good_code) is_openning = true;
+        if (right_good_code) {
+            startTime = Time.time;
+            is_openning = true; 
+        }
+
+
     }
     
     public void change_right_true()
     {
         right_good_code = true;
-        if (left_good_code) is_openning = true;
+        if (left_good_code){
+            startTime = Time.time;
+            is_openning = true;
+        }
     }
 
     public void change_left_wrong()
