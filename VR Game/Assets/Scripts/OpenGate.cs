@@ -66,4 +66,12 @@ public class OpenGate : MonoBehaviour
     {
         right_good_code = false;
     }
+
+    public void open_gate()
+    {
+        if (!is_openning) {
+            startTime = Time.time;
+            is_openning = true;
+        }
+    }
 }

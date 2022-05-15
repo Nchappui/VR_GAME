@@ -42,7 +42,7 @@ namespace Valve.VR.InteractionSystem
 
 		//-------------------------------------------------
 		void Update()
-		{
+		{ /*
 			if ( ( burnTime != 0 ) && ( Time.time > ( ignitionTime + burnTime ) ) && isBurning )
 			{
 				isBurning = false;
@@ -55,6 +55,7 @@ namespace Valve.VR.InteractionSystem
 					Destroy( fireObject );
 				}
 			}
+			*/
 		}
 
 
