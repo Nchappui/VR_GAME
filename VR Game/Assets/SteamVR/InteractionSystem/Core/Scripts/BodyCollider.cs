@@ -31,5 +31,10 @@ namespace Valve.VR.InteractionSystem
 			capsuleCollider.height = Mathf.Max( capsuleCollider.radius, distanceFromFloor );
 			transform.localPosition = head.localPosition - 0.5f * distanceFromFloor * Vector3.up;
 		}
-	}
+
+        private void OnCollisionEnter(Collision collision)
+        {
+			print(collision.transform.name);
+        }
+    }
 }
