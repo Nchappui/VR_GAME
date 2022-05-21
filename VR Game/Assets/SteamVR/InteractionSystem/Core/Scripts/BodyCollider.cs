@@ -25,11 +25,12 @@ namespace Valve.VR.InteractionSystem
 
 
 		//-------------------------------------------------
-		void FixedUpdate()
+		void Update()
 		{
 			float distanceFromFloor = Vector3.Dot( head.localPosition, Vector3.up );
 			capsuleCollider.height = Mathf.Max( capsuleCollider.radius, distanceFromFloor );
-			transform.localPosition = head.localPosition - 0.5f * distanceFromFloor * Vector3.up;
+			//transform.localPosition = head.localPosition - 0.5f * distanceFromFloor * Vector3.up;
+			transform.position = new Vector3 (head.position.x, head.position.y-1, head.position.z);
 		}
 
         private void OnCollisionEnter(Collision collision)
