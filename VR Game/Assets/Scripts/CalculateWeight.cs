@@ -7,6 +7,7 @@ public class CalculateWeight : MonoBehaviour
 {
     private float weight=0;
     public TextMeshPro text;
+    public float target_weight;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +35,14 @@ public class CalculateWeight : MonoBehaviour
             weight -= w.weight;
             text.text = weight.ToString();
         }
+    }
+
+    public bool enough_weight()
+    {
+        if (target_weight <= weight)
+        {
+            return true;
+        }
+        return false;
     }
 }

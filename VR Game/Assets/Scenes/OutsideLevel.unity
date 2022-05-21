@@ -445,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.052
+      value: -4.546
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -453,7 +453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.058
+      value: 28.864
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1362,7 +1362,19 @@ MonoBehaviour:
       m_Calls: []
   onDetachFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366186111}
+        m_TargetAssemblyTypeName: CheckTotalWeight, Assembly-CSharp
+        m_MethodName: CheckWeights
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -2072,7 +2084,19 @@ MonoBehaviour:
       m_Calls: []
   onDetachFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366186111}
+        m_TargetAssemblyTypeName: CheckTotalWeight, Assembly-CSharp
+        m_MethodName: CheckWeights
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -2468,7 +2492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72b95971e4cf4843b6d809347f236b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
+  weight: 2
 --- !u!114 &554328409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2533,7 +2557,19 @@ MonoBehaviour:
       m_Calls: []
   onDetachFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366186111}
+        m_TargetAssemblyTypeName: CheckTotalWeight, Assembly-CSharp
+        m_MethodName: CheckWeights
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -3633,7 +3669,19 @@ MonoBehaviour:
       m_Calls: []
   onDetachFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366186111}
+        m_TargetAssemblyTypeName: CheckTotalWeight, Assembly-CSharp
+        m_MethodName: CheckWeights
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -4164,7 +4212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0005
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
       propertyPath: m_LocalScale.z
@@ -4180,7 +4228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01093
+      value: 0.01187
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4210,6 +4258,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
 --- !u!4 &759518530 stripped
@@ -4222,19 +4278,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
   m_PrefabInstance: {fileID: 759518529}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &759518532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759518531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7475a98a983921a44b85737c997d8ddd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 0}
 --- !u!65 &759518533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4261,6 +4304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 913368446}
+  target_weight: 10
 --- !u!1001 &759762543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5232,7 +5276,19 @@ MonoBehaviour:
       m_Calls: []
   onDetachFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366186111}
+        m_TargetAssemblyTypeName: CheckTotalWeight, Assembly-CSharp
+        m_MethodName: CheckWeights
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -5703,7 +5759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72b95971e4cf4843b6d809347f236b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 6
+  weight: 7
 --- !u!114 &1046071458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5768,7 +5824,19 @@ MonoBehaviour:
       m_Calls: []
   onDetachFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366186111}
+        m_TargetAssemblyTypeName: CheckTotalWeight, Assembly-CSharp
+        m_MethodName: CheckWeights
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -6417,7 +6485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0005
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
       propertyPath: m_LocalScale.z
@@ -6433,7 +6501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01093
+      value: 0.0119
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6463,6 +6531,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
 --- !u!4 &1108211921 stripped
@@ -6488,6 +6564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 8746062}
+  target_weight: 12
 --- !u!65 &1108211924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7411,6 +7488,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000011593137232, guid: 27db19a72d2a2f74bb8d8611df46e9b5, type: 3}
   m_PrefabInstance: {fileID: 1340027168}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1366186110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000014041143818, guid: f11886bad7ca13742ba0be955318d952, type: 3}
+  m_PrefabInstance: {fileID: 812272766}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1366186111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366186110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772d87e5c844b864a8055f310b3c9b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correct_weights:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2124455203}
+        m_TargetAssemblyTypeName: OpenGate, Assembly-CSharp
+        m_MethodName: open_gate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  pipe1: {fileID: 759518530}
+  pipe2: {fileID: 1948500330}
+  pipe3: {fileID: 1108211921}
 --- !u!1 &1367536547
 GameObject:
   m_ObjectHideFlags: 0
@@ -8147,7 +8259,19 @@ MonoBehaviour:
       m_Calls: []
   onDetachFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366186111}
+        m_TargetAssemblyTypeName: CheckTotalWeight, Assembly-CSharp
+        m_MethodName: CheckWeights
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -9595,7 +9719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0005
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
       propertyPath: m_LocalScale.z
@@ -9611,7 +9735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01093
+      value: 0.01197
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9641,6 +9765,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce5d49241fb4d9840985fd010ad9decc, type: 3}
 --- !u!4 &1948500330 stripped
@@ -9666,6 +9798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1808905872}
+  target_weight: 8
 --- !u!65 &1948500333
 BoxCollider:
   m_ObjectHideFlags: 0

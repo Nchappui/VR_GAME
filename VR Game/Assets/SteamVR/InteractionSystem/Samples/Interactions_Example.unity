@@ -7465,6 +7465,7 @@ MonoBehaviour:
   repositionGameObject: 1
   maintainMomemntum: 1
   momemtumDampenRate: 5
+  startFrozen: 0
 --- !u!114 &504149795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20582,6 +20583,9 @@ MonoBehaviour:
   ignitionDelay: 0
   ignitionSound: {fileID: 671960964}
   canSpreadFromThisSource: 0
+  startBurning:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1477037010
 GameObject:
   m_ObjectHideFlags: 0
@@ -26801,6 +26805,10 @@ PrefabInstance:
       propertyPath: urpControllerMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 70a2eb634d7ed434b86d36f190fcf3a1, type: 2}
+    - target: {fileID: 13693334, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
 --- !u!1 &1893278402
