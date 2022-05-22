@@ -9,7 +9,7 @@ public class MovableObjects : MonoBehaviour
 
     [Tooltip("Position where the object will repsawn if destroyed")]
     public Vector3 RespawnPos;
-    public Quaternion RespawnRot { get; private set; }
+    public Quaternion RespawnRot;
     public Vector3 RespawnScale { get; private set; }
     private void Awake()
     {
@@ -20,11 +20,11 @@ public class MovableObjects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < limitHeight)
+        if (transform.localPosition.y < limitHeight)
         {
             var transform1 = transform;
-            transform1.position = RespawnPos;
-            transform1.rotation = RespawnRot;
+            transform1.localPosition = RespawnPos;
+            transform1.localRotation = RespawnRot;
             transform1.localScale = RespawnScale;
 
             if (TryGetComponent(out Rigidbody rb))
