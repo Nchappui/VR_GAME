@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
+namespace Valve.VR.InteractionSystem{
 
 public class CantStuckHands : MonoBehaviour
 {
@@ -17,13 +20,16 @@ public class CantStuckHands : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //print(this.transform.parent.rotation.y);
-        if (closed & this.transform.parent.rotation.y*100 > init_rot+5)
+            //print(this.transform.parent.rotation.y);
+            //print("test");
+            //print(transform.GetComponent<Rigidbody>().mass);
+        if (closed & Math.Abs(this.transform.parent.rotation.y) * 100 > init_rot + 5 & collider.isTrigger==false)
         {
             closed = false;
+            HandCanPassThrough();
         }
 
-        if (!closed & this.transform.parent.rotation.y*100 <= init_rot+5)
+        if (!closed & Math.Abs(this.transform.parent.rotation.y) * 100 <= init_rot + 5)
         {
             closed = true;
             HandCanPassThrough();
@@ -36,10 +42,11 @@ public class CantStuckHands : MonoBehaviour
         collider.isTrigger = true;
         StartCoroutine(waiter());
     }
-    
+
     IEnumerator waiter()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(10);
         collider.isTrigger = false;
     }
+}
 }

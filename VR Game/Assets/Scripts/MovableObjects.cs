@@ -22,16 +22,18 @@ public class MovableObjects : MonoBehaviour
     {
         if (transform.localPosition.y < limitHeight)
         {
-            var transform1 = transform;
-            transform1.localPosition = RespawnPos;
-            transform1.localRotation = RespawnRot;
-            transform1.localScale = RespawnScale;
-
             if (TryGetComponent(out Rigidbody rb))
             {
                 rb.velocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
             }
+            
+            var transform1 = transform;
+            transform1.localPosition = RespawnPos;
+            transform1.localRotation = RespawnRot;
+            transform1.localScale = RespawnScale;
+
+            
         }
     }
 }
