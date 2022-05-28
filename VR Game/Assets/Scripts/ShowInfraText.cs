@@ -36,6 +36,12 @@ public class ShowInfraText : MonoBehaviour
             }
 
         }
+        else if (lights_on)
+        {
+            new_albedo = 0;
+            new_color.a = (float)new_albedo;
+            text.color = new_color;
+        }
     }
 
     public void ChangeProjoOn()

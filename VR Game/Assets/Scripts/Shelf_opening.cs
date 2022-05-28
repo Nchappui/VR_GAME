@@ -50,9 +50,11 @@ public class Shelf_opening : MonoBehaviour
     public void One_more_book()
     {
         current_number_of_books += 1;
+        TriggerOpenning();
     }
     public void One_less_book()
     {
         current_number_of_books -= 1;
+        TriggerOpenning();
     }
 }
