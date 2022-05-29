@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f73a80b310b20bd47b9ec05d3530dd56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limitHeight: 0.09
+  limitHeight: -0.2
   RespawnPos: {x: 1.962, y: 0.336, z: 2.094}
   RespawnRot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &62116629
@@ -1862,6 +1862,20 @@ MonoBehaviour:
     actionPath: /actions/default/in/Infinadeck
     needsReinit: 0
   Speed: 3
+--- !u!114 &103217676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103217659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9775bb2969b85494abac74c4e9c251e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalePlayer: 1
+  vrCamera: {fileID: 103217663}
 --- !u!1 &104214694 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 104060, guid: 1475b54d4c70442728a3a49a5ae2ae19, type: 3}

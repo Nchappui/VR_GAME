@@ -31,7 +31,7 @@ namespace Valve.VR.InteractionSystem
         {
             if (other.name.Contains("Book_placement") && !placed)
             {
-                print("Found placement");
+                //print("Found placement");
                 left.DetachObject(this.gameObject);
                 right.DetachObject(this.gameObject);
                 this.transform.rotation = Quaternion.Euler(0, - 90, 0);
