@@ -9,6 +9,7 @@ namespace Valve.VR.InteractionSystem
     {
         public GameObject Lock;
         public UnityEvent UnlockDoor;
+        public UnityEvent PlaySound;
         private Rigidbody rb;
         public Vector3 LockOrientation;
         private bool isInLock = false;
@@ -49,6 +50,7 @@ namespace Valve.VR.InteractionSystem
         }
         IEnumerator DestroyKey()
         {
+            PlaySound.Invoke();
             yield return new WaitForSeconds(2);
             Destroy(this.gameObject);
             UnlockDoor.Invoke();

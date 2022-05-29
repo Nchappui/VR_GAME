@@ -25,14 +25,14 @@ public class ScalePlayer : MonoBehaviour
         {
             yScale = this.transform.localScale.y;
             yScale += 0.05f;
-            print(yScale);
+            //print(yScale);
             this.transform.localScale = new Vector3(1, yScale, 1);
         }
         else if (vrCamera.transform.position.y > 1.2 && scalePlayer)
         {
             yScale = this.transform.localScale.y;
             yScale -= 0.05f;
-            print(yScale);
+            //print(yScale);
             this.transform.localScale = new Vector3(1, yScale, 1);
         }
     }
