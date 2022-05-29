@@ -13,6 +13,7 @@ public class NarratorTutorial : MonoBehaviour
     public UnityEvent donespeaking;
 
     private AudioSource audios;
+    private bool isPlaying = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,18 @@ public class NarratorTutorial : MonoBehaviour
     public void LoadAndPlaySound(AudioClip newAudio)
     {
         audios.clip = newAudio;
+        if (!isPlaying) {
+            StartCoroutine(example());
+        }
+        
+    }
+
+    IEnumerator example()
+    {
+        isPlaying = true;
         audios.Play();
+        yield return new WaitWhile(() => audios.isPlaying);
+        isPlaying = false;
     }
 
     IEnumerator WaitSecond()
