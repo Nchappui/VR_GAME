@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Shelf_opening : MonoBehaviour
 {
@@ -13,9 +14,13 @@ public class Shelf_opening : MonoBehaviour
     private float startTime;
     private float distance;
 
+
     public int number_of_books_to_place;
     private int current_number_of_books=0;
-    
+
+
+    public UnityEvent problemSolved;
+
     void Start()
     {
         init_pos = this.transform.position;
@@ -44,6 +49,7 @@ public class Shelf_opening : MonoBehaviour
 
             startTime = Time.time;
             is_openning = true;
+            problemSolved.Invoke();
         }
     }
 

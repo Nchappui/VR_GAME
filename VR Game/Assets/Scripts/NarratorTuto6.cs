@@ -8,7 +8,7 @@ namespace Valve.VR.InteractionSystem
     {
         public UnityEvent tried;
         private CircularDrive cd;
-        public bool keyNotFound = true;
+        private bool notSolved = true;
 
         // Start is called before the first frame update
         void Start()
@@ -24,15 +24,14 @@ namespace Valve.VR.InteractionSystem
 
         private void OnCollisionEnter(Collision collision)
         {
-            print(collision.gameObject.layer);
-            if (collision.gameObject.layer == 3 && keyNotFound)
+            if (collision.gameObject.layer == 3 && notSolved)
             {
                 tried.Invoke();
             }
         }
         public void FoundKey()
         {
-            keyNotFound = false;
+            notSolved = false;
         }
 
 

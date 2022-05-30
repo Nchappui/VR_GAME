@@ -14,9 +14,11 @@ public class NarratorTutorial : MonoBehaviour
 
     private AudioSource audios;
     private bool isPlaying = false;
+    private HashSet<AudioClip> already_played;
     // Start is called before the first frame update
     void Start()
     {
+        already_played = new HashSet<AudioClip>();
         audios = this.GetComponent<AudioSource>();
         audios.clip = clip;
         audios.volume = 0.3f;
@@ -33,12 +35,24 @@ public class NarratorTutorial : MonoBehaviour
     {
         audios.clip = newAudio;
         if (!isPlaying) {
-            StartCoroutine(example());
+            StartCoroutine(playSound());
         }
         
     }
 
-    IEnumerator example()
+    public void PlaySoundOnce(AudioClip newAudio)
+    {
+        
+        if (!isPlaying && !already_played.Contains(newAudio))
+        {
+            audios.clip = newAudio;
+            already_played.Add(newAudio);
+            StartCoroutine(playSound());
+        }
+
+    }
+
+    IEnumerator playSound()
     {
         isPlaying = true;
         audios.Play();
