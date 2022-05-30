@@ -17343,6 +17343,7 @@ GameObject:
   - component: {fileID: 1486930950}
   - component: {fileID: 1486930949}
   - component: {fileID: 1486930951}
+  - component: {fileID: 1486930952}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -17432,9 +17433,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1486930951}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 1486930952}
+        m_TargetAssemblyTypeName: NarratorLight, Assembly-CSharp
+        m_MethodName: buttonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17515,7 +17516,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 62e377c408f5f76459bb82eecabddef7, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -17601,6 +17602,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1486930952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486930947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742efc40fd92df5448e9c1acd01ad127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  off1: {fileID: 0}
+  on1: {fileID: 0}
+  off2: {fileID: 0}
+  off3: {fileID: 0}
+  off4: {fileID: 0}
 --- !u!4 &1488186413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4578747582177550067, guid: df039b09bb35a5a4db6edf76716483a2, type: 3}
@@ -21650,7 +21668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open_pos_tranform: {fileID: 1107752718}
   speed: 0.1
-  number_of_books_to_place: 1
+  number_of_books_to_place: 6
   problemSolved:
     m_PersistentCalls:
       m_Calls:
