@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class DetectPlayerCollision : MonoBehaviour
 {
     public UnityEvent reached;
+
+    public bool detect_second = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +24,15 @@ public class DetectPlayerCollision : MonoBehaviour
     {
         if (other.transform.gameObject.layer == 6)
         {
-            reached.Invoke();
-            this.gameObject.SetActive(false);
+            if (!detect_second)
+            {
+                reached.Invoke();
+                this.gameObject.SetActive(false);
+            }
+            else
+            {
+                detect_second = false;
+            }
         }
     }
 }
