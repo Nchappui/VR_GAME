@@ -1355,7 +1355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25644790}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -7.4436665, y: 0, z: -0.6}
+  m_LocalPosition: {x: 0, y: 0, z: -0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2117887587}
@@ -1938,7 +1938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 6367
+  m_text: "   \t2978\n+\t3389\n---------------\n= \t????"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1965,8 +1965,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5323,7 +5323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177618563}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 7.43, y: 0, z: -0.7}
+  m_LocalPosition: {x: 0, y: 0, z: -0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2145260399}
@@ -20547,7 +20547,7 @@ PrefabInstance:
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 771700728}
+      objectReference: {fileID: 0}
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -20574,7 +20574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: nextHint
+      value: buttonClicked
       objectReference: {fileID: 0}
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -20590,7 +20590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HintsLevel1, Assembly-CSharp
+      value: ExitLabyrinth, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -20688,21 +20688,62 @@ MonoBehaviour:
   m_GameObject: {fileID: 771700726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9adbde7c9c5ae1a44abe668f08a9b196, type: 3}
+  m_Script: {fileID: 11500000, guid: 0703d228528c06540aa71e430b100e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clips:
-  - {fileID: 8300000, guid: fccb3ecc0f15f0d4c96f32e45583679c, type: 3}
-  - {fileID: 8300000, guid: 480bfa0bf39a55348a57fef0a3f950a0, type: 3}
-  - {fileID: 8300000, guid: 1291e50d2362d4e44ac0c5cc4ef6d3d4, type: 3}
-  - {fileID: 8300000, guid: 442c85a251027d5469242da9b0abc42a, type: 3}
-  - {fileID: 8300000, guid: 5c24d2b38ebcc634594a963ab2b99897, type: 3}
-  - {fileID: 8300000, guid: 08b97b5de2dead94cb4ab6780d51faaa, type: 3}
-  - {fileID: 8300000, guid: 8890a622ad40e1747824dcce3bc256f6, type: 3}
-  - {fileID: 8300000, guid: c36200798a2f5854b909b4efb5bae10e, type: 3}
-  - {fileID: 8300000, guid: fe2140af0663d8b41971febeaf0e5e90, type: 3}
-  - {fileID: 8300000, guid: 9de1b58586842a540b31a55fa5b4cb37, type: 3}
-  - {fileID: 8300000, guid: a846ce2ee6d8b5f42bcc0e7cd7353169, type: 3}
+  press1: {fileID: 0}
+  press2: {fileID: 0}
+  exit_fired:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1245342181}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1406951696}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1695105127}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 860593534}
+        m_TargetAssemblyTypeName: OpenGate, Assembly-CSharp
+        m_MethodName: open_gate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &778272987
 GameObject:
   m_ObjectHideFlags: 0
@@ -25367,7 +25408,7 @@ PrefabInstance:
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 917319224}
+      objectReference: {fileID: 0}
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -25394,7 +25435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: nextHint
+      value: buttonClicked
       objectReference: {fileID: 0}
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -25410,7 +25451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HintsLevel1, Assembly-CSharp
+      value: HintsLabyrinth, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -25508,21 +25549,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 917319222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9adbde7c9c5ae1a44abe668f08a9b196, type: 3}
+  m_Script: {fileID: 11500000, guid: d2d555b80b361e142a58c9883d6e0714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clips:
-  - {fileID: 8300000, guid: fccb3ecc0f15f0d4c96f32e45583679c, type: 3}
-  - {fileID: 8300000, guid: 480bfa0bf39a55348a57fef0a3f950a0, type: 3}
-  - {fileID: 8300000, guid: 1291e50d2362d4e44ac0c5cc4ef6d3d4, type: 3}
-  - {fileID: 8300000, guid: 442c85a251027d5469242da9b0abc42a, type: 3}
-  - {fileID: 8300000, guid: 5c24d2b38ebcc634594a963ab2b99897, type: 3}
-  - {fileID: 8300000, guid: 08b97b5de2dead94cb4ab6780d51faaa, type: 3}
-  - {fileID: 8300000, guid: 8890a622ad40e1747824dcce3bc256f6, type: 3}
-  - {fileID: 8300000, guid: c36200798a2f5854b909b4efb5bae10e, type: 3}
-  - {fileID: 8300000, guid: fe2140af0663d8b41971febeaf0e5e90, type: 3}
-  - {fileID: 8300000, guid: 9de1b58586842a540b31a55fa5b4cb37, type: 3}
-  - {fileID: 8300000, guid: a846ce2ee6d8b5f42bcc0e7cd7353169, type: 3}
+  press1: {fileID: 0}
+  press2: {fileID: 0}
+  press3: {fileID: 0}
+  show_layout:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1001316345}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1208936092}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &918955421
 GameObject:
   m_ObjectHideFlags: 0
@@ -27732,7 +27791,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1324
+  m_text: "   \t9999\n-\t8675\n---------------\n= \t????"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27759,8 +27818,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -33381,6 +33440,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237874618}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1245342181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000012172126358, guid: 27db19a72d2a2f74bb8d8611df46e9b5, type: 3}
+  m_PrefabInstance: {fileID: 531388792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1248346260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38277,6 +38341,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403824318}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1406951696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000012172126358, guid: 27db19a72d2a2f74bb8d8611df46e9b5, type: 3}
+  m_PrefabInstance: {fileID: 1629430997}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1429435139
 GameObject:
   m_ObjectHideFlags: 0
@@ -45852,6 +45921,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690486959}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1695105127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000012172126358, guid: 27db19a72d2a2f74bb8d8611df46e9b5, type: 3}
+  m_PrefabInstance: {fileID: 19195991}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1696623816
 GameObject:
   m_ObjectHideFlags: 0
@@ -57589,7 +57663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011593137232, guid: 27db19a72d2a2f74bb8d8611df46e9b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: -8.52
       objectReference: {fileID: 0}
     - target: {fileID: 4000011593137232, guid: 27db19a72d2a2f74bb8d8611df46e9b5, type: 3}
       propertyPath: m_LocalPosition.z
