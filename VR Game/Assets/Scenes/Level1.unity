@@ -809,7 +809,7 @@ MonoBehaviour:
         m_MethodName: PlaySoundOnce
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 8300000, guid: b430816749a0348498273205b88a507e, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4553,7 +4553,7 @@ MonoBehaviour:
         m_MethodName: LoadAndPlaySound
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 8300000, guid: 7598b10c71b2d914a834d38b78b2662c, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5372,7 +5372,7 @@ MonoBehaviour:
   onFrozenDistanceThreshold:
     m_PersistentCalls:
       m_Calls: []
-  minAngle: 0
+  minAngle: -20
   freezeOnMin: 0
   onMinAngle:
     m_PersistentCalls:
@@ -6926,7 +6926,7 @@ MonoBehaviour:
         m_MethodName: LoadAndPlaySound
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 8300000, guid: 25c6b4d87b0a3514b8c458a4b75fc8a8, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -9136,7 +9136,7 @@ MonoBehaviour:
         m_MethodName: PlaySoundOnce
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 8300000, guid: 053ed649e6c7f0448b0c36132dc9e662, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -10311,7 +10311,7 @@ MonoBehaviour:
         m_MethodName: LoadAndPlaySound
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 8300000, guid: de4c9e727f8c4d745854ae02969372ec, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -13328,7 +13328,7 @@ PrefabInstance:
       objectReference: {fileID: 103217663}
     - target: {fileID: 1815068280796645685, guid: c975860e50254f046b6e14ba515b8218, type: 3}
       propertyPath: autoStart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1815068280796645685, guid: c975860e50254f046b6e14ba515b8218, type: 3}
       propertyPath: cameraRig
@@ -15751,6 +15751,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5031895021914707370, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
+      propertyPath: m_Volume
+      value: 0.786
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031895021914707370, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -17445,6 +17449,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1486930951}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onButtonUp:
     m_PersistentCalls:
       m_Calls: []
@@ -17516,9 +17532,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 62e377c408f5f76459bb82eecabddef7, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.86
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -17614,11 +17630,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742efc40fd92df5448e9c1acd01ad127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  off1: {fileID: 0}
-  on1: {fileID: 0}
-  off2: {fileID: 0}
-  off3: {fileID: 0}
-  off4: {fileID: 0}
+  off1: {fileID: 8300000, guid: ab810a349ade4244480fe1b0bef20355, type: 3}
+  off2: {fileID: 8300000, guid: 614a1d9f09d35df41a0b8abadb5eb4d0, type: 3}
+  off3: {fileID: 8300000, guid: d71004414e66f344e8436a3fe8231e3d, type: 3}
+  off4: {fileID: 8300000, guid: d3a1d8645e9f75b4e989b0b71f90f59c, type: 3}
 --- !u!4 &1488186413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4578747582177550067, guid: df039b09bb35a5a4db6edf76716483a2, type: 3}
@@ -18649,7 +18664,7 @@ MonoBehaviour:
         m_MethodName: LoadAndPlaySound
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 8300000, guid: ec5f106b78b879f4a8dcea93ea3b521b, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -21162,11 +21177,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 5f8f6f844f3eb2b4d985d3ff094588c4, type: 3}
-  - {fileID: 8300000, guid: 8b77b7058398bbf48a66cc83663bc8f5, type: 3}
-  - {fileID: 8300000, guid: 8cb6136f320788942b237388339373b4, type: 3}
-  - {fileID: 8300000, guid: 65b0e39c586ac3e4897b05dccf515078, type: 3}
-  - {fileID: 8300000, guid: b201f66d039026c40ae6d0e921264073, type: 3}
+  - {fileID: 8300000, guid: fccb3ecc0f15f0d4c96f32e45583679c, type: 3}
+  - {fileID: 8300000, guid: 480bfa0bf39a55348a57fef0a3f950a0, type: 3}
+  - {fileID: 8300000, guid: 1291e50d2362d4e44ac0c5cc4ef6d3d4, type: 3}
+  - {fileID: 8300000, guid: 442c85a251027d5469242da9b0abc42a, type: 3}
+  - {fileID: 8300000, guid: 5c24d2b38ebcc634594a963ab2b99897, type: 3}
+  - {fileID: 8300000, guid: 08b97b5de2dead94cb4ab6780d51faaa, type: 3}
+  - {fileID: 8300000, guid: 8890a622ad40e1747824dcce3bc256f6, type: 3}
+  - {fileID: 8300000, guid: c36200798a2f5854b909b4efb5bae10e, type: 3}
+  - {fileID: 8300000, guid: fe2140af0663d8b41971febeaf0e5e90, type: 3}
+  - {fileID: 8300000, guid: 9de1b58586842a540b31a55fa5b4cb37, type: 3}
+  - {fileID: 8300000, guid: a846ce2ee6d8b5f42bcc0e7cd7353169, type: 3}
 --- !u!1001 &1766188341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21506,6 +21527,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 299251207684635695, guid: 8a1bfa42455794849a7de64531526a92, type: 3}
+      propertyPath: rightCode.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: 3715aec491b7be84aa819bf4b57dadad, type: 3}
+    - target: {fileID: 299251207684635695, guid: 8a1bfa42455794849a7de64531526a92, type: 3}
       propertyPath: rightCode.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -21677,7 +21702,7 @@ MonoBehaviour:
         m_MethodName: LoadAndPlaySound
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 8300000, guid: 7d5b0ad6cfc4d41438a3333963855d03, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -25251,7 +25276,7 @@ MonoBehaviour:
         m_MethodName: PlaySoundOnce
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 8300000, guid: 6c7ff9cb5323ede4187063f6e0f832e3, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

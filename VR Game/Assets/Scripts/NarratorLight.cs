@@ -31,15 +31,15 @@ public class NarratorLight : MonoBehaviour
                 aSource.clip = off1;
                 StartCoroutine(playSound());
                 break;
-            case 2 when !isPlaying:
+            case 3 when !isPlaying:
                 aSource.clip = off2;
                 StartCoroutine(playSound());
                 break;
-            case 3 when !isPlaying:
+            case 5 when !isPlaying:
                 aSource.clip = off3;
                 StartCoroutine(playSound());
                 break;
-            case 5 when !isPlaying:
+            case 7 when !isPlaying:
                 aSource.clip = off4;
                 StartCoroutine(playSound());
                 break;
