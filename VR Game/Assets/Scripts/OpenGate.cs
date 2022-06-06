@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class OpenGate : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class OpenGate : MonoBehaviour
 
     private bool left_good_code;
     private bool right_good_code;
+
+    public UnityEvent isOpening;
     
     // Start is called before the first frame update
     void Start()
@@ -42,6 +45,7 @@ public class OpenGate : MonoBehaviour
     { 
         left_good_code = true;
         if (right_good_code) {
+            isOpening.Invoke();
             startTime = Time.time;
             is_openning = true; 
         }
@@ -53,6 +57,7 @@ public class OpenGate : MonoBehaviour
     {
         right_good_code = true;
         if (left_good_code){
+            isOpening.Invoke();
             startTime = Time.time;
             is_openning = true;
         }
@@ -70,6 +75,7 @@ public class OpenGate : MonoBehaviour
     public void open_gate()
     {
         if (!is_openning) {
+            isOpening.Invoke();
             startTime = Time.time;
             is_openning = true;
         }

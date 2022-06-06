@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class OpenHouseDoor : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class OpenHouseDoor : MonoBehaviour
 
     private bool left_good_code;
     private bool right_good_code;
+
+    public UnityEvent isOpenning;
 
     // Start is called before the first frame update
     void Start()
@@ -78,6 +81,7 @@ public class OpenHouseDoor : MonoBehaviour
     {
         if (!is_openning)
         {
+            isOpenning.Invoke();
             startTime = Time.time;
             is_openning = true;
         }
