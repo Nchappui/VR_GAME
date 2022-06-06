@@ -20,6 +20,7 @@ public class MovableObjects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(transform.localPosition.y);
         if (transform.localPosition.y < limitHeight)
         {
             if (TryGetComponent(out Rigidbody rb))
