@@ -4,7 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/OutsideLevel.unity
+    guid: ebc124388ec73104ca618b22dea33609
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 6a40b53b3472c3246aa668967584da4f
+  - enabled: 1
+    path: Assets/Scenes/The Escape.unity
+    guid: a2657ca0968f2ae42a84bbeec00371a9
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a9b3a03288e22d141a55ec1b43bcc44a, type: 2}
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 82f333ee651087b47bbf79852ea9d0b5, type: 2}
