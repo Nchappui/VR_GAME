@@ -25,24 +25,28 @@ public class NarratorLight : MonoBehaviour
     public void buttonClicked()
     {
         Clicked += 1;
-        switch (Clicked)
+        if (!isPlaying)
         {
-            case 1 when !isPlaying:
+            if (Clicked == 1)
+            {
                 aSource.clip = off1;
                 StartCoroutine(playSound());
-                break;
-            case 3 when !isPlaying:
+            }
+            else if (Clicked == 3)
+            {
                 aSource.clip = off2;
                 StartCoroutine(playSound());
-                break;
-            case 5 when !isPlaying:
+            }
+            else if (Clicked == 5)
+            {
                 aSource.clip = off3;
                 StartCoroutine(playSound());
-                break;
-            case 7 when !isPlaying:
+            }
+            else if (Clicked == 7)
+            {
                 aSource.clip = off4;
                 StartCoroutine(playSound());
-                break;
+            }
         }
     }
 
