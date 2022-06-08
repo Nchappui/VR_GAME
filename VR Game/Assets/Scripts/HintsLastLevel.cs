@@ -27,12 +27,12 @@ public class HintsLastLevel : MonoBehaviour
     {
         if (!isPlaying)
         {
-            if (!flowerSolvedb && hintNumber == 3)
+            if (!flowerSolvedb && hintNumber == 2)
             {
                 aSource.clip = clips[hintNumber];
                 StartCoroutine(playSound());
             }
-            else if (!bowSolvedb && hintNumber == 5)
+            else if (!bowSolvedb && hintNumber == 6)
             {
                 aSource.clip = clips[hintNumber];
                 StartCoroutine(playSound());

@@ -21,11 +21,15 @@ public class WaitForXSeconds : MonoBehaviour
 
     public void start_waiting()
     {
+        print("started");
+        print(seconds);
         StartCoroutine(enumerator());
     }
     IEnumerator enumerator()
     {
-        yield return new WaitForSeconds(seconds);
+        print("in it"); 
+        yield return new WaitForSeconds(5);
+        print("done");
         waiting_done.Invoke();
     }
 }

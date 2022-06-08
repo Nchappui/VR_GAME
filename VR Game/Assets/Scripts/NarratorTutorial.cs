@@ -15,6 +15,8 @@ public class NarratorTutorial : MonoBehaviour
     private AudioSource audios;
     private bool isPlaying = false;
     private HashSet<AudioClip> already_played;
+
+    public UnityEvent last;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +54,16 @@ public class NarratorTutorial : MonoBehaviour
 
     }
 
+    public void PlayLastSound(AudioClip newAudio)
+    {
+        if (!isPlaying && !already_played.Contains(newAudio))
+        {
+            audios.clip = newAudio;
+            already_played.Add(newAudio);
+            StartCoroutine(playLastSound());
+        }
+    }
+
     IEnumerator playSound()
     {
         isPlaying = true;
@@ -81,5 +93,14 @@ public class NarratorTutorial : MonoBehaviour
         yield return new WaitForSeconds(thirdClip.length);
         donespeaking.Invoke();
 
+    }
+
+    IEnumerator playLastSound()
+    {
+        isPlaying = true;
+        audios.Play();
+        yield return new WaitWhile(() => audios.isPlaying);
+        isPlaying = false;
+        last.Invoke();
     }
 }
