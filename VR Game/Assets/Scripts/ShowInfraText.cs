@@ -18,8 +18,7 @@ public class ShowInfraText : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        print(this.transform.rotation);
+    { 
         if(projo_on && !lights_on)
         {
             float roty = this.transform.rotation.y;

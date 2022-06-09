@@ -311,6 +311,7 @@ public class TreadmillAlgorithm : MonoBehaviour
 
             GUI.backgroundColor = Color.white;
 
+            GUI.enabled = true;
 
             base.OnInspectorGUI();
         }

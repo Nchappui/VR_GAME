@@ -31938,6 +31938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 534848851}
+  - component: {fileID: 534848854}
   - component: {fileID: 534848852}
   - component: {fileID: 534848853}
   m_Layer: 0
@@ -31973,7 +31974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46ae039b6d80d9409298aeb157fb6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steamInterface: {fileID: 0}
+  steamInterface: {fileID: 534848854}
   SPEED_GAIN: 1
   INNERRADIUS: 0.15
   OUTERRADIUS: 1
@@ -31994,7 +31995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161c94b0187dd1d478c1716da7ef4b6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steamVRInterface: {fileID: 0}
+  steamVRInterface: {fileID: 534848854}
   MINIMUM_STEP_HEIGHT: 0.06
   INITIAL_HEIGHT: 0
   MINIMUM_HORIZONTAL_STEP: 10
@@ -32007,6 +32008,27 @@ MonoBehaviour:
   offsetPtr: 0
   offsetSize: 2
   window_size: 20
+--- !u!114 &534848854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534848850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b759f4348250a754a9f837f359784f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoStart: 1
+  autoCalibrate: 0
+  applyCalibration: 0
+  originPosition: {x: 0, y: 0, z: 0}
+  rightPosition: {x: 1, y: 0, z: 0}
+  frontPosition: {x: 0, y: 0, z: 1}
+  cameraRig: {fileID: 0}
+  displayRawInputs: 0
+  displayTransformedInputs: 0
 --- !u!1 &536864720
 GameObject:
   m_ObjectHideFlags: 0
@@ -79102,6 +79124,7 @@ MonoBehaviour:
     actionPath: /actions/default/in/Infinadeck
     needsReinit: 0
   Speed: 3
+  hacking: {fileID: 534848850}
 --- !u!114 &1305089397
 MonoBehaviour:
   m_ObjectHideFlags: 0

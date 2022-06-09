@@ -10,11 +10,18 @@ public class ViveInput : MonoBehaviour
     
     public SteamVR_Action_Vector2 InfinadeckAction;
     public float Speed = 100.0f;
+    public GameObject hacking;
+    private bool hacking_used = false;
+    private TreadmillAlgorithm hacking_algo;
     //public Transform player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (hacking.gameObject.activeInHierarchy)
+        {
+            hacking_used = true;
+            hacking_algo = hacking.GetComponent<TreadmillAlgorithm>();
+        }
     }
 
     // Update is called once per frame
@@ -37,6 +44,12 @@ public class ViveInput : MonoBehaviour
             //player.trackingOriginTransform.position = teleportPosition + playerFeetOffset;
             //transform.parent.position += direction * Time.deltaTime * Speed;
         }
+        if(hacking_used)
+        {
+            Vector3 direction = new Vector3(hacking_algo.InfinadeckDifferenceToCenter().x, 0f, hacking_algo.InfinadeckDifferenceToCenter().y);
+            player.trackingOriginTransform.position += direction * Speed * Time.deltaTime;
+        }
+        
         /*
         Vector2 InfinadeckDirection = InfinadeckAction.GetAxis(SteamVR_Input_Sources.Any);
 
