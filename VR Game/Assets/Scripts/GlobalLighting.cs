@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GlobalLighting : MonoBehaviour
 {
+    public GameObject sun;
+    public UnityEvent triggerSun;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +21,7 @@ public class GlobalLighting : MonoBehaviour
     {
         if (other.transform.gameObject.layer == 6)
         {
-            RenderSettings.ambientIntensity = 0.8f;
+            triggerSun.Invoke();
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using System;
 
 namespace Valve.VR.InteractionSystem{
@@ -10,6 +11,7 @@ public class CantStuckHands : MonoBehaviour
     private new Collider collider;
     private bool closed = true;
     private float init_rot;
+    public UnityEvent GlobalLights;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +29,14 @@ public class CantStuckHands : MonoBehaviour
         {
             closed = false;
             HandCanPassThrough();
+                GlobalLights.Invoke();
         }
 
         if (!closed & Math.Abs(this.transform.parent.rotation.y) * 100 <= init_rot + 5)
         {
             closed = true;
             HandCanPassThrough();
+            GlobalLights.Invoke();
         }
     }
 
