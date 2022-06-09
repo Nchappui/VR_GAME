@@ -21,6 +21,7 @@ public class GlobalLighting : MonoBehaviour
     {
         if (other.transform.gameObject.layer == 6)
         {
+            RenderSettings.ambientIntensity = 1f;
             triggerSun.Invoke();
         }
     }
