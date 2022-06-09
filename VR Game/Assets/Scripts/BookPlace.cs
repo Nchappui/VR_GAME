@@ -34,7 +34,7 @@ namespace Valve.VR.InteractionSystem
                 //print("Found placement");
                 left.DetachObject(this.gameObject);
                 right.DetachObject(this.gameObject);
-                this.transform.rotation = Quaternion.Euler(0, - 90, 0);
+                this.transform.rotation = Quaternion.Euler(0, 90, 0);
                 this.transform.position=other.transform.position;
                 placed = true;
             }

@@ -43,7 +43,7 @@ public class InfinadeckLocomotion : MonoBehaviour
             xDistance =  (calcX * Mathf.Cos(fixAngle) + calcY * Mathf.Sin(fixAngle)) * worldScale.x * speedGain;
             yDistance = (-calcX * Mathf.Sin(fixAngle) + calcY * Mathf.Cos(fixAngle)) * worldScale.z * speedGain;
             // Move user based on treadmill motion as long as the deck is not calibrating
-            if (true) { cameraRig.transform.position += new Vector3(xDistance, 0, yDistance); } //Used to check to verify not calibrating
+            if (true) { cameraRig.transform.position += new Vector3(-xDistance, 0, -yDistance); } //Used to check to verify not calibrating
             if (infinadeckReferenceObj) { infinadeckReferenceObj.currentTreadmillSpeed = Vector3.Magnitude(new Vector3((float)speeds.v0, (float)speeds.v1,0)); }
         }
     }

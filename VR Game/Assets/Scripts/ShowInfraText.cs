@@ -19,18 +19,19 @@ public class ShowInfraText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(this.transform.rotation);
         if(projo_on && !lights_on)
         {
             float roty = this.transform.rotation.y;
-            if(0.4f<=roty && roty <= 0.65)
+            if(-1f<=roty && roty <= -0.7f)
             {
-                new_albedo = 4 * roty - 1.6;
+                new_albedo = 9/3 * roty + 9/3;
                 new_color.a = (float)new_albedo;
                 text.color = new_color;
             }
-            else if (0.64f < roty && roty <= 0.9)
+            else if (-0.7 < roty && roty <= -0.4)
             {
-                new_albedo = -4 * roty +3.6;
+                new_albedo = -9/3 * roty -4/3;
                 new_color.a = (float)new_albedo;
                 text.color = new_color;
             }

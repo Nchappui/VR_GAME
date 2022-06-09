@@ -27,7 +27,6 @@ public class PlayBirdSound : MonoBehaviour
             if (!detect_second)
             {
                 reached.Invoke();
-                print("reached");
             }
             else
             {
