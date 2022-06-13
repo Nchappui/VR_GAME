@@ -13,7 +13,7 @@ Three applications must be turned on:<br/>
 ![screen1](https://user-images.githubusercontent.com/33152136/172950907-e49f7c82-0cac-44f1-83dc-4e0b52dde3ea.png)<br/>
 
 
-3. Infinadeck application(Screenshot to come)<br/>
+3. Infinadeck application: <br/>
 4.  ![image](https://user-images.githubusercontent.com/33152136/173403895-8865c71b-8642-445b-a3be-fa9a7d0c058a.png)
 
 Once everything is turned on, you need to open Unity Hub and select VR GAME
