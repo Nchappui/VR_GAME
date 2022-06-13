@@ -34,3 +34,8 @@ If the player is moving on the treadmill but his chararcter isn't moving in game
 Instead of opening the scene The Escape V.2, open the scene OpenWorld: 
 
 ![image](https://user-images.githubusercontent.com/33152136/173404411-ad76778e-5ad4-4b5e-8a61-9f7798ff75e8.png)
+
+
+## Video of the entire game
+
+https://www.youtube.com/watch?v=JJMp278OOT0
