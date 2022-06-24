@@ -38,6 +38,16 @@ Instead of opening the scene The Escape V.2, open the scene OpenWorld:
 
 ![image](https://user-images.githubusercontent.com/33152136/173404411-ad76778e-5ad4-4b5e-8a61-9f7798ff75e8.png)
 
+Make sur the position of the physical_player is Vector3(0.624000013,1.449,-2.03299999), to do so, just click on the physical_player component on the left and you can see his position on the right:
+
+![image](https://user-images.githubusercontent.com/33152136/175544570-2061e78d-186e-413e-8f00-74a13e0a26a8.png)
+
+## To skip directly to the last part of the last level
+
+Open the scene OpenWorld like previously but set the position of the physical player to: Vector3(-5.68900013,1.449,34.7439995) (see image below)
+
+![image](https://user-images.githubusercontent.com/33152136/175545253-edba5df3-ef54-4d3b-8b2f-d347aae99fc6.png)
+
 
 ## Video of the entire game
 
