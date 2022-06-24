@@ -19,7 +19,7 @@ Three applications must be turned on:<br/>
 Once everything is turned on, you need to open Unity Hub and select VR GAME
 ![image](https://user-images.githubusercontent.com/33152136/172952063-af18fe1a-1f4e-4798-8809-da8566beb549.png)
 
-Then go to Scenes and The Escape V.2:
+Then go to Scenes and The Escape V.2 (if you want to start the last level of the game only, look at the point "To launch the OpenWorld directly"):
 
 ![image](https://user-images.githubusercontent.com/33152136/172952145-5d96dd0a-d1bb-4936-83b0-597f5e3508b1.png)
 
@@ -48,6 +48,15 @@ Open the scene OpenWorld like previously but set the position of the physical pl
 
 ![image](https://user-images.githubusercontent.com/33152136/175545253-edba5df3-ef54-4d3b-8b2f-d347aae99fc6.png)
 
+## To switch between the classic Infinadeck API and the students hacking one
+
+### Classic API:
+Do all the steps mentionned in "How to launch the game" and in your scene make sure to have the "Infinadeck" component activated and the "Students_hacking" deactivated
+![image](https://user-images.githubusercontent.com/33152136/175546739-30f31a24-3d47-4f02-b8bd-5d33b76d127f.png)
+![image](https://user-images.githubusercontent.com/33152136/175546870-ba278399-e2f2-4f1f-b2a9-9845427b7c86.png)
+
+### Hacking API:
+To come
 
 ## Video of the entire game
 
