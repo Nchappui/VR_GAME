@@ -56,7 +56,37 @@ Do all the steps mentionned in "How to launch the game" and in your scene make s
 ![image](https://user-images.githubusercontent.com/33152136/175546870-ba278399-e2f2-4f1f-b2a9-9845427b7c86.png)
 
 ### Hacking API:
-To come
+#### 1. Do all the steps mentionned in "How to launch the game". You must also turn on both feet captors and attach them to the player feet
+
+#### 2. Enable "students_hacking" and disable "Infinadeck"
+
+![image](https://user-images.githubusercontent.com/33152136/175559287-2ab95118-d332-4a0c-8412-b79b757056ae.png)
+
+![image](https://user-images.githubusercontent.com/33152136/175559158-a10f7f19-e63f-4d8d-9acc-293a98534b96.png)
+
+#### 3. Start the game
+
+#### 4. Set the trackers for the head and body
+
+![image](https://user-images.githubusercontent.com/33152136/175562184-a6969918-73cc-49ea-af45-32cd1939c6d5.png)
+
+You must ask the player to move his body, and look in the scene which tracker corresponds to the head and which tracker corresponds to the one attached to his back. Here in this case, the tracked attached to his head was TOTO 0 and the one attached to his back was TOTO 6
+
+Finally press configurate tracker
+
+#### 5. Set the trackers for the foots
+
+![image](https://user-images.githubusercontent.com/33152136/175562461-36b4aa45-bcab-4c09-8955-34c6dce52827.png)
+
+Once again you must ask the player to move his feets to figure out which one is left and the right one to set them in the script "Foot Swing Analysis" attached to "Students_hacking". Here, in the picture, TOTO7 was the right foot and TOTO8 the left one.
+
+Then press "Set trackers", "Calibrate foot height" and "Toggle acceleration detection" in order
+
+#### 6. Start the hacking algorithm
+
+![image](https://user-images.githubusercontent.com/33152136/175563935-45de79e2-6ef0-4eca-96c0-37ac2d7820f8.png)
+
+Finally, go back to the script "Treadmill Algorithm and press the button "Send speeds"
 
 ## Video of the entire game
 
