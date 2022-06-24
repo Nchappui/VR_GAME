@@ -23,7 +23,10 @@ Then go to Scenes and The Escape V.2:
 
 ![image](https://user-images.githubusercontent.com/33152136/172952145-5d96dd0a-d1bb-4936-83b0-597f5e3508b1.png)
 
-Now Uniy is set up and the only things you need to do is to have the player on the treadmill, attach him to the ceilling using the harness and turn on one of the captors in his back (the light of the captor should turn green) and make sure that it is detected in the InfinaDeck application.
+Now Uniy is set up and the only things you need to do is to have the player on the treadmill, attach him to the ceilling using the harness and turn on one of the captors in his back (the light of the captor should turn green) and make sure that it is detected in the InfinaDeck application, to do so, in the Infinadeck application, you must go to settings->select user tracker->press user tracker(an error should appear, just dismiss it), then go back to the "run" tab on the InfinaDeck application and it should look like that:
+
+![image](https://user-images.githubusercontent.com/33152136/175543867-c4f0b799-d8d8-4bd4-9d8e-c4b06437bb1d.png)
+
 
 Once everything is done, you can click start on the InfinaDeck application and hit play on Unity
 
