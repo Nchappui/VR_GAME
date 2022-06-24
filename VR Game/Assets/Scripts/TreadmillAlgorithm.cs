@@ -14,14 +14,16 @@ public class TreadmillAlgorithm : MonoBehaviour
     [Range(0f, 5f)]
     public float SPEED_GAIN = 1f;
 
-    private bool sendSpeed = false;
-    private bool stop = false;
+    public bool sendSpeed = false;
+    public bool stop = false;
     public float INNERRADIUS = 0.15f;
     public float OUTERRADIUS = 1f;
     public Vector3 tracker_virtual_center_offset = Vector3.zero;
     public Vector3 virtual_centered_tracker_position = Vector3.zero;
     public Vector3 infinadeckCenter = Vector3.zero;
-    
+
+    public float xSpeed = 0.0f;
+    public float ySpeed = 0.0f;
 
     // --- Initialization ---
     float k1 = 0.1f;
@@ -43,7 +45,7 @@ public class TreadmillAlgorithm : MonoBehaviour
     DateTime prevTime;
     public int back_tracker_id = 0;
     public int head_tracker_id = 0;
-    private bool calibrated;
+    public bool calibrated;
     UnityEngine.Quaternion tracker_invert_rotation_at_calibration;
 
     SetOfTrackers trackers;
@@ -69,9 +71,9 @@ public class TreadmillAlgorithm : MonoBehaviour
     public void BindTracker()
     {
         trackers = steamInterface.get_trackers_positions();
-        string label = steamInterface.get_tracker_id((uint)back_tracker_id);
+        string label = steamInterface.get_tracker_labels()[(uint)back_tracker_id];
         back_tracker_source = trackers.at(label);
-        label = steamInterface.get_tracker_id((uint)head_tracker_id);
+        label = steamInterface.get_tracker_labels()[(uint)head_tracker_id];
         head_tracker_source = trackers.at(label);
     }
 
@@ -88,7 +90,7 @@ public class TreadmillAlgorithm : MonoBehaviour
             Debug.DrawLine(virtual_centered_tracker_position, new_center_position, Color.green);
             Debug.DrawLine(back_tracker_source.position.as_unity_vector3(), new_center_position, Color.red);
         }
-        
+
         //print("Connection state = " + Infinadeck.Infinadeck.CheckConnection());
         //print("Speeds = " + Infinadeck.Infinadeck.GetFloorSpeeds().v0 +""+Infinadeck.Infinadeck.GetFloorSpeeds().v1);
     }
@@ -104,11 +106,13 @@ public class TreadmillAlgorithm : MonoBehaviour
     public Vector2 InfinadeckDifferenceToCenter()
     {
         //print(tracker_invert_rotation_at_calibration);
-        if (tracker_invert_rotation_at_calibration == null) return new Vector2(0,0);
+        if (tracker_invert_rotation_at_calibration == null) return new Vector2(0, 0);
 
         var tracker_displacement_from_center = new_center_position - virtual_centered_tracker_position;
 
-        print("Tracker distance from center: " + (tracker_displacement_from_center).ToString() + " new center = " + new_center_position + " virtual_pos = " + virtual_centered_tracker_position);
+        //print("A: " + back_tracker_source.position.ToString() );
+
+        //print("Tracker distance from center: " + (tracker_displacement_from_center).ToString() + " new center = " + new_center_position + " virtual_pos = " + virtual_centered_tracker_position);
 
         return new Vector2(-tracker_displacement_from_center.x, -tracker_displacement_from_center.z);
 
@@ -128,7 +132,7 @@ public class TreadmillAlgorithm : MonoBehaviour
 
             InvokeRepeating(nameof(RunAlgorithm), 1f, iterationDelay); // Peut etre que 0.01 est trop court ?
         }
-        
+
 
 
         //old calibration
@@ -151,7 +155,7 @@ public class TreadmillAlgorithm : MonoBehaviour
 
         DateTime currentTime = DateTime.Now;
         float deltaTime = (float)(currentTime - prevTime).TotalMilliseconds;
-        float[] speeds = new float[] { (float) Infinadeck.Infinadeck.GetFloorSpeeds().v0, (float)Infinadeck.Infinadeck.GetFloorSpeeds().v1 };//infinadeck.getFilteredSpeeds();
+        float[] speeds = new float[] { (float)Infinadeck.Infinadeck.GetFloorSpeeds().v0, (float)Infinadeck.Infinadeck.GetFloorSpeeds().v1 };//infinadeck.getFilteredSpeeds();
         Vector2 treadmillSpeed = new Vector2(speeds[0], speeds[1]);//	GetTreadmillSpeed(orderedTreadmillSpeed, prevTreadmillSpeed);
         //print("Recieved speeds : " + treadmillSpeed);
 
@@ -197,6 +201,8 @@ public class TreadmillAlgorithm : MonoBehaviour
             {
                 newTargetSpeedX = newTargetSpeedX * SPEED_GAIN > 0.9d ? 0.9f : newTargetSpeedX * SPEED_GAIN;
                 newTargetSpeedY = newTargetSpeedY * SPEED_GAIN > 0.9d ? 0.9f : newTargetSpeedY * SPEED_GAIN;
+                xSpeed = newTargetSpeedX;
+                ySpeed = newTargetSpeedY;
                 Infinadeck.Infinadeck.SetManualSpeeds(newTargetSpeedX, newTargetSpeedY);
                 print("Speed sent : newxSpeed = " + newTargetSpeedX + ", newySpeed = " + newTargetSpeedY + " | userPos = " + usrPos);
 
@@ -273,47 +279,57 @@ public class TreadmillAlgorithm : MonoBehaviour
 	}
 	*/
 
-    [CustomEditor(typeof(TreadmillAlgorithm))]
-    public class PhasespaceInterfaceEditor : Editor
+    public static void emergency_stop()
     {
+        Infinadeck.Infinadeck.SetManualSpeeds(0, 0);
+        Infinadeck.Infinadeck.StopTreadmill();
+    }
+}
 
-        private TreadmillAlgorithm script;
-        private void OnEnable() { script = target as TreadmillAlgorithm; }
 
-        static string[] default_labels = new string[0];
+[CustomEditor(typeof(TreadmillAlgorithm))]
+public class TreadmillAlgorithmEditor : Editor
+{
 
-        public override void OnInspectorGUI()
+    private TreadmillAlgorithm script;
+    private void OnEnable() { script = target as TreadmillAlgorithm; }
+
+    static string[] default_labels = new string[0];
+
+    public override void OnInspectorGUI()
+    {
+        GUILayout.Label("Tracker used");
+        if (script.steamInterface != null) script.head_tracker_id = EditorGUILayout.Popup("Headset", script.head_tracker_id, script.steamInterface.get_tracker_labels() != null ? script.steamInterface.get_tracker_labels() : default_labels);
+
+        if (script.steamInterface != null) script.back_tracker_id = EditorGUILayout.Popup("Tracker use", script.back_tracker_id, script.steamInterface.get_tracker_labels() != null ? script.steamInterface.get_tracker_labels() : default_labels);
+
+        GUI.backgroundColor = Color.green;
+
+        if (GUILayout.Button("Configurate tracker"))
         {
-            GUILayout.Label("Tracker used");
-            if (script.steamInterface != null) script.head_tracker_id = EditorGUILayout.Popup("Headset", script.head_tracker_id, script.steamInterface.get_tracker_labels() != null ? script.steamInterface.get_tracker_labels() : default_labels);
-
-            if (script.steamInterface != null) script.back_tracker_id = EditorGUILayout.Popup("Tracker use", script.back_tracker_id, script.steamInterface.get_tracker_labels() != null ? script.steamInterface.get_tracker_labels() : default_labels);
-
-            GUI.backgroundColor = Color.green;
-
-            if (GUILayout.Button("Configurate tracker"))
-            {
-                script.CalibrateTracker(); //do tracker configuration here
-                script.calibrated = true;
-            }
-
-            GUI.backgroundColor = Color.white;
-
-            GUI.enabled = script.calibrated;
-
-
-            if (GUILayout.Button("Send speeds")) { script.sendSpeed = true; }
-            if (GUILayout.Button("Stop sending")) { script.sendSpeed = false; }
-
-            GUI.backgroundColor = Color.red;
-            if (GUILayout.Button("Stop")) { script.stop = true; }
-            if (GUILayout.Button("Reset stop")) { script.stop = false; }
-
-            GUI.backgroundColor = Color.white;
-
-            GUI.enabled = true;
-
-            base.OnInspectorGUI();
+            script.CalibrateTracker(); //do tracker configuration here
+            script.calibrated = true;
         }
+
+        GUI.backgroundColor = Color.white;
+
+        GUI.enabled = script.calibrated;
+
+
+        if (GUILayout.Button("Send speeds")) { script.sendSpeed = true; }
+        if (GUILayout.Button("Stop sending")) { script.sendSpeed = false; }
+
+
+        GUI.backgroundColor = Color.red;
+        if (GUILayout.Button("Stop")) { script.stop = true; }
+        if (GUILayout.Button("Reset stop")) { script.stop = false; }
+
+        GUI.enabled = true;
+
+        if (GUILayout.Button("\nEmergency stop\n")) { TreadmillAlgorithm.emergency_stop(); }
+
+        GUI.backgroundColor = Color.white;
+
+        base.OnInspectorGUI();
     }
 }

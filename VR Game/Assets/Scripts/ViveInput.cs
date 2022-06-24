@@ -37,6 +37,7 @@ public class ViveInput : MonoBehaviour
             //print("up has been pressed");
             Vector3 direction = (PlayerCamera.transform.rotation * Vector3.forward);
             direction.y = 0;
+            print(direction);
             player.trackingOriginTransform.position += direction * Speed * Time.deltaTime;
             //player.transform.position += direction * Speed * Time.deltaTime;
             //player.trackingOriginTransform.position += direction * Time.deltaTime * Speed;
@@ -46,7 +47,7 @@ public class ViveInput : MonoBehaviour
         }
         if(hacking_used)
         {
-            Vector3 direction = new Vector3(hacking_algo.InfinadeckDifferenceToCenter().x, 0f, hacking_algo.InfinadeckDifferenceToCenter().y);
+            Vector3 direction = new Vector3(hacking_algo.ySpeed, 0f, -hacking_algo.xSpeed);
             player.trackingOriginTransform.position += direction * Speed * Time.deltaTime;
         }
         

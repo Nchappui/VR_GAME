@@ -3248,8 +3248,8 @@ MonoBehaviour:
   InfinadeckAction:
     actionPath: /actions/default/in/Infinadeck
     needsReinit: 0
-  Speed: 3
-  hacking: {fileID: 0}
+  Speed: 2
+  hacking: {fileID: 676839085}
 --- !u!114 &153364050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3376,6 +3376,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!4 &153364056 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 153364039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &155293899
 GameObject:
   m_ObjectHideFlags: 0
@@ -11281,6 +11286,111 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &676839085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 676839089}
+  - component: {fileID: 676839088}
+  - component: {fileID: 676839087}
+  - component: {fileID: 676839086}
+  m_Layer: 0
+  m_Name: Students_hacking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &676839086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676839085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161c94b0187dd1d478c1716da7ef4b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steamVRInterface: {fileID: 676839088}
+  MINIMUM_STEP_HEIGHT: 0.06
+  INITIAL_HEIGHT: 0
+  MINIMUM_HORIZONTAL_STEP: 10
+  ACCELERATION_COEFFICIENT: 500
+  max_accel_x: 0
+  max_accel_z: 0
+  max_height: 0
+  magnitude_threshold: 0.0005
+  offsetArray: []
+  offsetPtr: 0
+  offsetSize: 2
+  window_size: 20
+--- !u!114 &676839087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676839085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46ae039b6d80d9409298aeb157fb6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steamInterface: {fileID: 676839088}
+  SPEED_GAIN: 1
+  sendSpeed: 0
+  stop: 0
+  INNERRADIUS: 0.15
+  OUTERRADIUS: 1
+  tracker_virtual_center_offset: {x: 0, y: 0, z: 0}
+  virtual_centered_tracker_position: {x: 0, y: 0, z: 0}
+  infinadeckCenter: {x: 0, y: 0, z: 0}
+  xSpeed: 0
+  ySpeed: 0
+  back_tracker_id: 0
+  head_tracker_id: 0
+  calibrated: 0
+--- !u!114 &676839088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676839085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b759f4348250a754a9f837f359784f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoStart: 1
+  autoCalibrate: 1
+  applyCalibration: 1
+  originPosition: {x: 0.87242675, y: 0.1387974, z: -0.7673675}
+  rightPosition: {x: 0.7693572, y: 0.18703341, z: 0.664611}
+  frontPosition: {x: -0.8244709, y: 0.16045499, z: -0.89498043}
+  cameraRig: {fileID: 153364056}
+  displayRawInputs: 0
+  displayTransformedInputs: 1
+--- !u!4 &676839089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676839085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712185885
 GameObject:
   m_ObjectHideFlags: 0
@@ -37738,7 +37848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5868361897497031310, guid: c975860e50254f046b6e14ba515b8218, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5868361897497031344, guid: c975860e50254f046b6e14ba515b8218, type: 3}
       propertyPath: m_RootOrder
